@@ -1,0 +1,97 @@
+import java.util.Scanner; 
+
+  
+
+public class Main { 
+
+  public static void main(String[] args){ 
+
+     
+
+    //we are declare variables 
+
+    double principle, rate, ammountinsaving, interest; 
+
+    int time; 
+
+  
+
+    //adding scanner for user input 
+
+    Scanner sc = new Scanner(System.in); 
+
+  
+
+    // user inputs 
+
+    System.out.println("Enter the principle amount: "); 
+
+    principle = sc.nextDouble(); 
+
+    System.out.println("Enter the rate of interest: "); 
+
+    rate = sc.nextDouble()/ 100; 
+
+    System.out.println("Enter the time in months: "); 
+
+    time = sc.nextInt(); 
+
+    sc.close(); 
+
+
+    //calculating math 
+
+    ammountinsaving = principle * Math.pow(1 + (rate/time),time); 
+
+    interest = ammountinsaving - principle; 
+
+     
+
+    //printing out the results 
+
+    System.out.println("Interest Rate: \t\t\t\t\t " + rate*100+"%"); 
+
+    System.out.println("Times Compounded: \t\t\t\t\t "  + time);    
+
+    System.out.println("Principle: \t\t\t\t\t "  + "$ "+ String.format("%.2f", principle)); 
+
+    System.out.println("interest: \t\t\t\t\t" + "$ " + String.format("%2s",String.format("%.2f" , interest))); 
+
+    System.out.println("The ammount in savings is: \t" + "$"+String.format("%.2f", ammountinsaving)); 
+
+  
+    /* 
+
+    Enter the principle amount:  
+
+1000 
+
+Enter the rate of interest:  
+
+4.25 
+
+Enter the time in months:  
+
+12 
+
+Interest Rate:                   4.25% 
+
+Times Compounded:                    12 
+
+Principle:                   $ 1000.00 
+
+interest:                   $ 43.34 
+
+The ammount in savings is:  $1043.34 
+
+    */ 
+
+     
+
+  } 
+
+} 
+
+     
+
+     
